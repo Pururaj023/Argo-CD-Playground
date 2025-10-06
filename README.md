@@ -8,11 +8,18 @@ minikube start memory=4096 --driver=docker
 
 ```
 
+## Install Argo-CD on minikube
+
 Create a Namespace for Argo CD
 
 ```
 kubectl create namespace argocd
 
+```
+Install Argo-CD
+
+```
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
 Access the Agro CD ui using 
@@ -40,4 +47,10 @@ Configure the AgroCD to use the repo
 
 ```
 minikube service wisecow-svc -n wisecow
+```
+
+## Access the minikube dashboard
+
+```
+minikube dashboard
 ```
