@@ -18,8 +18,8 @@ spec:
     spec:
       containers:
         - name: wisecow
-          image: wisecow:latest
-          imagePullPolicy: Never  # local image
+          image: pururajchoudhary23/wisecow:latest
+          imagePullPolicy: Always 
           ports:
             - containerPort: 4499
           readinessProbe:
